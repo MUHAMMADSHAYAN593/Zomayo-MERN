@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 function connect(){
-    mongoose.connect("mongodb://localhost:27017/food-view")
+    mongoose.connect(process.env.MONGO_DB_URI)
     .then(()=>{
         console.log("MongoDB connected")
     })
